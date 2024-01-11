@@ -40,3 +40,19 @@
 # .env
 
 - npm install dotenv
+
+## IMPORTANT-POINTS
+
+- import { getPosts } from "../controllers/posts.js";
+  While importing we need to write .js at the end of the file like posts.js Unlike in React where we only use to write import { getPosts } from "../controllers/posts";
+
+## Step-By-Step
+
+- Initial installation
+- ** Set up Routing**
+  - Created Folder called routes
+    - posts.js => This will have all the routes => Change the localhost:5000/ to default localhost:5000/posts => Now all the routes will have prefix /posts
+  - Created Folder controllers => Folder structure for backend applications
+    - posts.js => This will have Logic for every routes
+  - Created Folder models
+    - postMessage.js
