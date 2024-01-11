@@ -6,13 +6,37 @@
 
 # Dependencies used
 
-- npm install @mui/material @emotion/react @emotion/styled
-- npm install axios
-- npm install @mui/icons-material
-- npm i jwt-decode
-- npm i moment
-- npm i react-file-base64
-- npm i react-redux
-- npm i react-router-dom
-- npm i redux
-- npm i redux-thunk
+# Initial Setup:
+
+- import express from "express";
+- import bodyParser from "body-parser";
+- import mongoose from "mongoose";
+- import cors from "cors";
+
+- import dotenv from "dotenv";
+- dotenv.config();
+
+- const app = express();
+
+- app.use(bodyParser.json({ limit: "30mb", extended: true }));
+- app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+- app.use(cors());
+
+## MongoDB Setup
+
+- Go to mongoDB Atlas and copy code from connect to your application and paste here
+
+- const CONNECTION_URL = process.env.MONGODB_CONNECTION_URL;
+
+- const PORT = process.env.PORT;
+
+- mongoose
+  .connect(CONNECTION_URL)
+  .then(() =>
+  app.listen(PORT, () => console.log(`Server running on port: ${PORT}`))
+  )
+  .catch((error) => console.log(error.message));
+
+# .env
+
+- npm install dotenv
