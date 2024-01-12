@@ -55,4 +55,7 @@
   - Created Folder controllers => Folder structure for backend applications
     - posts.js => This will have Logic for every routes
   - Created Folder models
-    - postMessage.js
+    - postMessage.js => Created postSchema
+  - Created another route for creating post
+  - Wrote logic inside getPosts and createPost inside controllers
+  -

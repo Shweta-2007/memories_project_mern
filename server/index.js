@@ -11,13 +11,13 @@ dotenv.config();
 
 const app = express();
 
-// Here first parameter is set up the starting point for all the routes inside of posts.js .
-// Every routes inside postRoutes is going to start with "/posts"
-app.use("/posts", postRoutes);
-
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
+
+// Here first parameter is set up the starting point for all the routes inside of posts.js .
+// Every routes inside postRoutes is going to start with "/posts"
+app.use("/posts", postRoutes);
 
 // MongoDB Setup
 
